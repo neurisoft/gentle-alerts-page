@@ -4,8 +4,6 @@ import { Bell, Mail, Monitor, Info } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,6 +77,7 @@ function NotificationSettings() {
   const [allEmail, setAllEmail] = useState(true);
   const [allBrowser, setAllBrowser] = useState(true);
   const [assignedOnly, setAssignedOnly] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   const setItem = (groupIdx: number, itemId: string, key: "email" | "browser", value: boolean) => {
     setGroups((prev) =>
@@ -108,7 +107,7 @@ function NotificationSettings() {
 
   return (
     <main className="min-h-screen bg-background pb-20">
-      <Toaster />
+      
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 px-6 py-7">
           <div className="flex items-center gap-3">
@@ -122,8 +121,8 @@ function NotificationSettings() {
               </p>
             </div>
           </div>
-          <Button onClick={() => toast.success("Notification preferences saved")}>
-            Save changes
+          <Button onClick={() => setSaved(true)}>
+            {saved ? "Saved" : "Save changes"}
           </Button>
         </div>
       </header>
