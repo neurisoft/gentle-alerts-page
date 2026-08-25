@@ -77,6 +77,7 @@ function NotificationSettings() {
   const [allEmail, setAllEmail] = useState(true);
   const [allBrowser, setAllBrowser] = useState(true);
   const [assignedOnly, setAssignedOnly] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   const setItem = (groupIdx: number, itemId: string, key: "email" | "browser", value: boolean) => {
     setGroups((prev) =>
