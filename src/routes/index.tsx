@@ -106,7 +106,7 @@ function NotificationSettings() {
 
   return (
     <main className="min-h-screen bg-background pb-20">
-      <Toaster />
+      
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 px-6 py-7">
           <div className="flex items-center gap-3">
