@@ -120,8 +120,8 @@ function NotificationSettings() {
               </p>
             </div>
           </div>
-          <Button onClick={() => toast.success("Notification preferences saved")}>
-            Save changes
+          <Button onClick={() => setSaved(true)}>
+            {saved ? "Saved" : "Save changes"}
           </Button>
         </div>
       </header>
