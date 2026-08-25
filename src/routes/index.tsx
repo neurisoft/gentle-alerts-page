@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
   component: NotificationSettings,
 });
 
-type Channel = "email" | "browser" | null;
+type Channel = boolean | null;
 
 type Item = { id: string; label: string; email: boolean; browser: Channel };
 
